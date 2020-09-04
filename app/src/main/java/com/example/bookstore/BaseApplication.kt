@@ -1,9 +1,10 @@
 package com.example.bookstore
 
 import android.app.Application
-import com.example.bookstore.core.di.firebaseStoreModule
-import com.example.bookstore.core.di.repositoryModule
-import com.example.bookstore.core.di.useCaseModule
+import com.example.bookstore.di.viewModelModule
+import com.example.core.di.firebaseStoreModule
+import com.example.core.di.repositoryModule
+import com.example.core.di.useCaseModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -18,7 +19,8 @@ class BaseApplication: Application() {
             modules(listOf(
                 firebaseStoreModule,
                 repositoryModule,
-                useCaseModule
+                useCaseModule,
+                viewModelModule
             ))
         }
     }

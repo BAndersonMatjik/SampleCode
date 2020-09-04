@@ -1,4 +1,4 @@
-package com.example.bookstore.core.domain.model
+package com.example.core.domain.model
 
 data class Book(
     var bookName: String?= null,
@@ -10,5 +10,5 @@ data class Book(
     var publisher: String?= null,
     var isbn: Int?= null
 ){
-
+    var idBook:String? = null
 }
